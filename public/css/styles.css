@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Poppins:wght@300;400;700&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  font-size: 24px;
+}
+.pokedex-container {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 24px;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow:
+    0 8px 32px rgba(60, 60, 100, 0.1),
+    0 1.5px 4px rgba(0, 0, 0, 0.04);
+  text-align: center;
+}
+
+.pokedex-logo {
+  width: 104px;
+  margin-bottom: 24px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pokedex-description {
+  font-size: 17px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.pokedex-link-wrapper {
+  margin-top: 18px;
+}
+
+.pokedex-link {
+  display: inline-block;
+  background: #f44336;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 17px;
+  box-shadow: 0 2px 8px rgba(244, 67, 54, 0.12);
+  transition:
+    background 0.2s,
+    box-shadow 0.2s;
+}
+
+.pokedex-link:hover,
+.pokedex-link:focus {
+  background: #d32f2f;
+  box-shadow: 0 4px 16px rgba(244, 67, 54, 0.18);
+}
+
+code {
+  background: #f3f3f3;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 95%;
+}
