@@ -44,6 +44,38 @@ A simple RESTful API to discover and explore a world of Pokemon.
 
 ---
 
+## 🌱 Seeding the Database
+
+To load Pokémon data from the [PokeAPI](https://pokeapi.co/) into your database, use the provided seed endpoint.
+
+### 1. Ensure the app and MongoDB are running
+
+```bash
+npm run dev
+# In another terminal, ensure MongoDB is up via Docker if needed:
+docker-compose up -d
+```
+
+### 2. Populate Pokémon data
+
+You can trigger the seeding with an HTTP POST request:
+
+```bash
+curl -X POST "http://localhost:3000/seed"
+```
+
+- By default, this seeds **10 Pokémon** into the database.
+
+**Seed a custom number:** Use the `total` query param for any amount (e.g., 50):
+
+```bash
+curl -X POST "http://localhost:3000/seed?total=50"
+```
+
+_Note: This operation will remove all previous Pokémon in the database and re-import from PokeAPI._
+
+---
+
 ## 📦 Features
 
 - 🔥 RESTful API for Pokémon data
