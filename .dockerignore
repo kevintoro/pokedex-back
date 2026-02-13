@@ -1,0 +1,23 @@
+# Node modules
+node_modules
+dist
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.env
+.env.*
+coverage
+.DS_Store
+*.tsbuildinfo
+.idea
+.vscode
+*.log
+test
+*.swp
+.gitignore
+.prettierrc
+.eslintrc
+.eslintignore
+.prettierignore
+git/
+eslint.config.mjs

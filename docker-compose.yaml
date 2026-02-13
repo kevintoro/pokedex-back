@@ -1,6 +1,7 @@
 services:
   db:
     image: mongo:latest
+    container_name: pokedex-db
     restart: always
     ports:
       - 27017:27017
@@ -9,3 +10,20 @@ services:
       MONGODB_USER: kronos
     volumes:
       - ./data:/data/db
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - ${PORT}:${PORT}
+    env_file:
+      - .env
+    depends_on:
+      - db
+    restart: always
+    image: pokedex-back
+    container_name: pokedex-back
+    environment:
+      - MONGODB=${MONGODB}
+      - PORT=${PORT}
+      - DEFAULT_LIMIT=${DEFAULT_LIMIT}
